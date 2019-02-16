@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'com.wfercosta.tw.assignment.train'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5+'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5+'
+    testCompile 'org.mockito:mockito-junit-jupiter:2+'
+}
