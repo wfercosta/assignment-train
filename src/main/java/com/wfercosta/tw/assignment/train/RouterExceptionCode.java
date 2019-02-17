@@ -1,5 +1,5 @@
 package com.wfercosta.tw.assignment.train;
 
 public enum RouterExceptionCode implements ExceptionCode {
-    NO_SUCH_ROUTE
+    INVALID_INPUT_DATA, INVALID_NODE, NO_SUCH_ROUTE
 }
