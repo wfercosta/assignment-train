@@ -2,48 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da7539e9-0728-4574-bb9a-fab0b68cb79d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/MessageResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/ApplicationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/DirectedEdge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/DirectedGraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/ExceptionCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/GraphInputDoesNotMatchPatternException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/InvalidGraphNodeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/NoSuchRouteException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/Route.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouteFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouteFilterEqualTo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouteFilterLessThanEqualTo$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouteFilterLessThanEqualTo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouteFilterType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RoutePath$RoutePathBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RoutePath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/Router.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouterExceptionCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/Trip.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/WeightedNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/com/wfercosta/tw/assignment/train/RouterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/com/wfercosta/tw/assignment/train/RouterTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/ApplicationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/ApplicationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/DirectedEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/DirectedEdge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/DirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/DirectedGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/ExceptionCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/ExceptionCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/GraphInputDoesNotMatchPatternException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/GraphInputDoesNotMatchPatternException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/InvalidGraphNodeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/InvalidGraphNodeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/NoSuchRouteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/NoSuchRouteException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/Route.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterEqualTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilterEqualTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterLessThanEqualTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilterLessThanEqualTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilterType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RoutePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/RoutePath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouterExceptionCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/RouterExceptionCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/Trip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/WeightedNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/WeightedNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/wfercosta/tw/assignment/train/RouterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/wfercosta/tw/assignment/train/RouterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -110,14 +69,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
+            <state relative-caret-position="370">
+              <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="3" selection-start-column="3" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -184,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Router.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/RoutePath.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Main.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -206,53 +175,6 @@
               <item name="train" type="b2602c69:ProjectViewProjectNode" />
               <item name="assignment-train" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
-            <path>
-              <item name="train" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assignment-train" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="train" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assignment-train" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="train" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assignment-train" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="train" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assignment-train" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="train" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="train" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assignment-train" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="train" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assignment-train" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="train" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assignment-train" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="train" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -262,7 +184,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550440904149" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550441062956" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
   </component>
@@ -377,13 +299,13 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Build" weight="0.32941177" />
       <window_info anchor="bottom" id="Messages" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -693,11 +615,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
+        <state relative-caret-position="370">
+          <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
         </state>
       </provider>
     </entry>
