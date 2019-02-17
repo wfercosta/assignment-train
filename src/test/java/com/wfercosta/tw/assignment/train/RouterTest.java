@@ -104,7 +104,7 @@ public class RouterTest {
                 RoutePath
                         .startAt("C")
                         .to("C")
-                        .stopsLessThanEqualTo(3)
+                        .filter(RouteFilterType.STOPS_LESS_THAN_EQUAL_TO, 3)
                         .end()
         );
 
@@ -122,6 +122,7 @@ public class RouterTest {
                 RoutePath
                         .startAt("A")
                             .to("C")
+                        .filter(RouteFilterType.STOPS_EQUAL_TO, 4)
                         .end()
         );
 
@@ -131,7 +132,6 @@ public class RouterTest {
     }
 
     @Test
-    @Disabled
     @DisplayName("8# Should return the shortest route distance with len 9 When the route is from A to C")
     public void Should_ReturnShortestRouteDistanceLen9_When_RouteFromAToC() {
 
@@ -147,7 +147,6 @@ public class RouterTest {
     }
 
     @Test
-    @Disabled
     @DisplayName("9# Should return the shortest route distance with len 9 When the route is from B to B")
     public void Should_ReturnShortestRouteDistanceLen9_When_RouteFromBToB() {
 
@@ -164,7 +163,6 @@ public class RouterTest {
 
 
     @Test
-    @Disabled
     @DisplayName("10# Should return 7 routes with distance len less than 30 When the route is from C to C")
     public void Should_Return7RoutesWithDistanceLenLessThan30_When_RouteFromCToC() {
 
@@ -172,7 +170,7 @@ public class RouterTest {
                 RoutePath
                         .startAt("C")
                             .to("C")
-                        .distanceLessThanEqualTo(30)
+                        .filter(RouteFilterType.DISTANCES_LESS_THAN_EQUAL_TO, 30)
                         .end()
         );
 

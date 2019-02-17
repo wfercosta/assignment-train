@@ -13,6 +13,7 @@ public class Router {
     private static final Logger LOG = LoggerFactory.getLogger(Router.class);
 
     private DirectedGraph graph;
+    private List<RouteFilter> filterTypes = new ArrayList<>();
 
     public Router(String data) {
 
@@ -21,6 +22,9 @@ public class Router {
         }
 
         this.graph = DirectedGraph.from(data);
+
+        filterTypes.add(new RouteFilterEqualTo());
+        filterTypes.add(new RouteFilterLessThanEqualTo());
 
     }
 
@@ -42,13 +46,20 @@ public class Router {
             throw new NoSuchRouteException(routePath);
         }
 
-        if (routePath.maxStops() > 1) {
-            routes = routes.stream().filter(route -> route.stops() <= routePath.maxStops()).collect(Collectors.toList());
+        if(!routePath.filters().isEmpty()) {
+
+            for (Map.Entry<RouteFilterType, Integer> entry : routePath.filters().entrySet()) {
+
+                Optional<RouteFilter> filter = filterTypes.stream().filter(type -> type.isSupported(entry.getKey())).findFirst();
+
+                if (filter.isPresent()) {
+                    routes = routes.stream().filter(route -> filter.get().test(route, entry.getKey(), entry.getValue())).collect(Collectors.toList());
+                }
+            }
+
         }
 
-        if (routePath.maxDistance() > 1) {
-            routes = routes.stream().filter(route -> route.stops() <= routePath.maxDistance()).collect(Collectors.toList());
-        }
+        LOG.debug(routes.toString());
 
         return Trip.of(routes, selected);
     }

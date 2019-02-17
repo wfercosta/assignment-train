@@ -2,21 +2,16 @@ package com.wfercosta.tw.assignment.train;
 
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class RoutePath {
 
-    private int maxDistance = -1;
     private List<String> paths;
-    private int index = 0;
-    private int maxStops = -1;
+    private Map<RouteFilterType, Integer> filters = new HashMap<>();
 
-    public RoutePath(List<String> paths, int maxStops, int maxDistance) {
+    public RoutePath(List<String> paths, Map<RouteFilterType, Integer> filters) {
         this.paths = Collections.unmodifiableList(paths);
-        this.maxStops = maxStops;
-        this.maxDistance = maxDistance;
+        this.filters.putAll(filters);
     }
 
     @Override
@@ -36,13 +31,10 @@ public class RoutePath {
         return this.paths.get(this.paths.size() - 1);
     }
 
-    public int maxStops() {
-        return this.maxStops;
+    public Map<RouteFilterType, Integer> filters() {
+        return this.filters;
     }
 
-    public int maxDistance() {
-        return this.maxDistance;
-    }
 
     public List<String> paths() {
         return Collections.unmodifiableList(this.paths);
@@ -51,9 +43,7 @@ public class RoutePath {
     public static class RoutePathBuilder {
 
         private List<String> paths = new ArrayList<>();
-        private String from;
-        private int maxStops = -1;
-        private int maxDistance = -1;
+        private Map<RouteFilterType, Integer> filters = new HashMap<>();
 
         public RoutePathBuilder to(String node) {
             this.paths.add(node);
@@ -61,16 +51,12 @@ public class RoutePath {
         }
 
         public RoutePath end() {
-            return new RoutePath(this.paths, maxStops, maxDistance);
+            return new RoutePath(this.paths, filters);
         }
 
-        public RoutePathBuilder stopsLessThanEqualTo(int maxStops) {
-            this.maxStops = maxStops;
-            return this;
-        }
 
-        public RoutePathBuilder distanceLessThanEqualTo(int distance) {
-            this.maxDistance = distance;
+        public RoutePathBuilder filter(RouteFilterType type, int required) {
+            filters.put(type, required);
             return this;
         }
     }
