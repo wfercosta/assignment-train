@@ -12,12 +12,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 
 public class Router {
 
     private static final Logger LOG = LoggerFactory.getLogger(Router.class);
+    public static final String REGULAR_EXPRESSION = "([A-Z]{2}[1-9]),\\s|([A-Z]{2}[1-9])";
 
     private DirectedGraph graph;
     private List<RouteFilter> filterTypes = new ArrayList<>();
@@ -28,11 +31,26 @@ public class Router {
     }
 
     private void validateAndInitializeInputData(String data) {
-        if (StringUtils.isEmpty(data)) {
+        List<String> edges = validateAndExtractEdges(data);
+        this.graph = DirectedGraph.from(edges);
+    }
+
+    private List<String> validateAndExtractEdges(String data) {
+        Pattern pattern = Pattern.compile(REGULAR_EXPRESSION);
+
+        Matcher matcher = pattern.matcher(data);
+
+        if (!matcher.find()) {
             throw new GraphInputDoesNotMatchPatternException(data);
         }
 
-        this.graph = DirectedGraph.from(data);
+        List<String> edges = new ArrayList<>();
+
+        do {
+            edges.add(Optional.ofNullable(matcher.group(2)).orElse(matcher.group(1)));
+        } while(matcher.find());
+
+        return edges;
     }
 
     private void initializeFilterTypes() {

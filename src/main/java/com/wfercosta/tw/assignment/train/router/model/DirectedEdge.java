@@ -5,35 +5,45 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class DirectedEdge {
 
+    public static final String PATTERN_EXPRESSION = "[A-Z]{2}[0-9]+";
     private String from;
     private String to;
     private Integer distance;
 
-    public DirectedEdge(String from, String to, int distance) {
-        this.from = from;
-        this.to = to;
-        this.distance = distance;
+    public DirectedEdge(String edge) {
+        initialize(edge);
     }
 
-    public DirectedEdge(String from, String to) {
-        this.from = from;
-        this.to = to;
-        this.distance = -1;
-    }
-
-    public static DirectedEdge of(String from, String to) {
-        return new DirectedEdge(from, to);
+    private void initialize(String edge) {
+        validateEdge(edge);
+        this.from = edge.substring(0, 1);
+        this.to = edge.substring(1, 2);
+        this.distance = Integer.parseInt(edge.substring(2));
     }
 
     public static DirectedEdge of(String edge) {
+        return new DirectedEdge(edge);
+    }
+
+    private void validateEdge(String edge) {
 
         if (StringUtils.isEmpty(edge)) {
             throw new GraphInputDoesNotMatchPatternException(edge);
         }
 
-        return new DirectedEdge(edge.substring(0, 1), edge.substring(1, 2), Integer.parseInt(edge.substring(2)));
+        Pattern pattern = Pattern.compile(PATTERN_EXPRESSION);
+        Matcher matcher = pattern.matcher(edge);
+        if (!matcher.find()) {
+            throw new GraphInputDoesNotMatchPatternException(edge);
+        }
+
     }
 
 

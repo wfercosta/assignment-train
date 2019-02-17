@@ -20,6 +20,7 @@ public class Main {
 
         while (true) {
             try {
+
                 System.out.println("Inform the graph edges (e.g. AB9, AD5, BD1): ");
                 Router router = Router.withGraph(scanner.nextLine());
 
@@ -30,6 +31,7 @@ public class Main {
                 printSelectedRoute(trip);
                 printShortestRoute(trip);
                 printPossibleRoutes(trip);
+
             } catch (ApplicationException e) {
                 LOG.error(e.getMessage());
             }

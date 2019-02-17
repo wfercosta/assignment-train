@@ -7,14 +7,12 @@ public class DirectedGraph {
 
     private Map<String, Set<DirectedEdge>> graph;
 
-    public DirectedGraph(String data) {
-        this.graph = Arrays.stream(data.replaceAll(" ","").split(","))
-                .map(DirectedEdge::of).collect(Collectors.groupingBy(DirectedEdge::from, Collectors.toCollection(LinkedHashSet::new)));
+    public DirectedGraph(List<String> data) {
+        this.graph = data.stream().map(DirectedEdge::of).collect(Collectors.groupingBy(DirectedEdge::from, Collectors.toCollection(LinkedHashSet::new)));
     }
 
-    public static DirectedGraph from(String data) {
-
-        return new DirectedGraph(data);
+    public static DirectedGraph from(List<String> edges) {
+        return new DirectedGraph(edges);
     }
 
     public Set<WeightedNode> adjacentsFrom(String node) {
