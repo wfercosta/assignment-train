@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @ExtendWith(MockitoExtension.class)
@@ -27,57 +27,65 @@ public class RouterTest {
     @DisplayName("1# Should return distance 9 When the route were A-B-C")
     public void Should_ReturnDistance9_When_RouteWhereABC() {
 
-        int distance = router.distanceOf(Route
-                                            .segment()
-                                                .from("A")
-                                                .to("B")
-                                                .to("C")
-                                            .end());
+        Trip trip = router.compute(
+                RoutePath
+                    .start()
+                        .from("A")
+                        .to("B")
+                        .to("C")
+                    .end()
+        );
 
-        assertEquals(9, distance);
+        assertEquals(9, trip.shortestRoute().distance());
     }
 
     @Test
     @DisplayName("2# Should return distance 5 When the route were A-D")
     public void Should_ReturnDistance5_When_RouteWhereAD() {
 
-        int distance = router.distanceOf(Route
-                                            .segment()
-                                                .from("A")
-                                                .to("D")
-                                            .end());
+        Trip trip = router.compute(
+                RoutePath
+                    .start()
+                        .from("A")
+                        .to("D")
+                    .end()
+        );
 
-        assertEquals(5, distance);
+        assertEquals(5, trip.shortestRoute().distance());
     }
 
     @Test
     @DisplayName("3# Should return distance 13 When the route were A-D-C")
     public void Should_ReturnDistance13_When_RouteWhereADC() {
 
-        int distance = router.distanceOf(Route
-                                            .segment()
-                                                .from("A")
-                                                .to("D")
-                                                .to("C")
-                                            .end());
+        Trip trip = router.compute(
+                RoutePath
+                    .start()
+                        .from("A")
+                        .to("D")
+                        .to("C")
+                    .end()
+        );
 
-        assertEquals(13, distance);
+        assertEquals(13, trip.shortestRoute().distance());
     }
 
     @Test
     @DisplayName("4# Should return distance 22 When the route were A-E-B-C-D")
     public void Should_ReturnDistance22_When_RouteWhereAEBCD() {
 
-        int distance = router.distanceOf(Route
-                                            .segment()
-                                                .from("A")
-                                                .to("E")
-                                                .to("B")
-                                                .to("C")
-                                                .to("D")
-                                            .end());
+        Trip trip = router.compute(
+                RoutePath
+                    .start()
+                        .from("A")
+                        .to("E")
+                        .to("B")
+                        .to("C")
+                        .to("D")
+                    .end()
+        );
 
-        assertEquals(22, distance);
+        assertEquals(22, trip.shortestRoute().distance());
     }
 
 
@@ -85,14 +93,14 @@ public class RouterTest {
     @DisplayName("5# Should return distance NO SUCH ROUTE When the route were A-E-D")
     public void Should_ReturnDistanceNoSuchRoute_When_RouteWhereAED() {
 
-        Assertions.assertThrows(NoSuchRouteException.class, () -> {
-            router.distanceOf(Route
-                    .segment()
-                      .from("A")
-                      .to("E")
-                      .to("D")
-                    .end());
-        });
+        Assertions.assertThrows(NoSuchRouteException.class, () -> router.compute(
+                RoutePath
+                    .start()
+                        .from("A")
+                        .to("E")
+                        .to("D")
+                    .end()
+                ));
 
     }
 
@@ -100,30 +108,84 @@ public class RouterTest {
     @DisplayName("6# Should return 2 trips When the trip starts in C and ends in C")
     public void Should_Return2Trips_When_TripStartsAndEndsInC() {
 
+        Trip trip = router.compute(
+                RoutePath
+                        .start()
+                            .from("C")
+                            .to("C")
+                        .end()
+        );
+
+        assertEquals(2, trip.routes().size());
+        assertTrue(trip.routes().stream().anyMatch( route -> route.stops() == 2));
+        assertTrue(trip.routes().stream().anyMatch( route -> route.stops() == 3));
+
     }
 
     @Test
     @DisplayName("7# Should return 3 trips When the trip starts in A and ends in C")
     public void Should_Return3Trips_When_TripStartsAAndEndsInC() {
 
+        Trip trip = router.compute(
+                RoutePath
+                        .start()
+                            .from("A")
+                            .to("C")
+                        .end()
+        );
+
+        assertEquals(3, trip.routes().size());
+        assertTrue(trip.routes().stream().allMatch( route -> route.stops() == 4));
+
     }
 
     @Test
-    @DisplayName("8# Should return shortest route with len 9 When the route is from A to C")
-    public void Should_ReturnShortestRouteLen9_When_RouteFromAToC() {
+    @DisplayName("8# Should return the shortest route distance with len 9 When the route is from A to C")
+    public void Should_ReturnShortestRouteDistanceLen9_When_RouteFromAToC() {
+
+        Trip trip = router.compute(
+                RoutePath
+                        .start()
+                            .from("A")
+                            .to("C")
+                        .end()
+        );
+
+        assertEquals(9, trip.shortestRoute().distance());
 
     }
 
     @Test
-    @DisplayName("9# Should return shortest route with len 9 When the route is from B to B")
-    public void Should_ReturnShortestRouteLen9_When_RouteFromBToB() {
+    @DisplayName("9# Should return the shortest route distance with len 9 When the route is from B to B")
+    public void Should_ReturnShortestRouteDistanceLen9_When_RouteFromBToB() {
+
+        Trip trip = router.compute(
+                RoutePath
+                        .start()
+                            .from("B")
+                            .to("B")
+                        .end()
+        );
+
+        assertEquals(9, trip.shortestRoute().distance());
 
     }
 
 
     @Test
-    @DisplayName("10# Should return 7 routes with distance less than 30 When the route is from C to C")
-    public void Should_Return7RoutesWithDistanceLessThan30_When_RouteFromCToC() {
+    @DisplayName("10# Should return 7 routes with distance len less than 30 When the route is from C to C")
+    public void Should_Return7RoutesWithDistanceLenLessThan30_When_RouteFromCToC() {
+
+        Trip trip = router.compute(
+                RoutePath
+                        .start()
+                            .from("C")
+                            .to("C")
+                        .end()
+        , 30);
+
+        assertEquals(7, trip.routes().size());
+        assertTrue(trip.routes().stream().allMatch( route -> route.distance() < 30));
 
     }
 
