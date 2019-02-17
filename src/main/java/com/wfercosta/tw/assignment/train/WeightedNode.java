@@ -35,12 +35,12 @@ public class WeightedNode {
 
     @Override
     public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this, "weight");
+        return HashCodeBuilder.reflectionHashCode(this);
     }
 
     @Override
     public boolean equals(Object obj) {
-        return EqualsBuilder.reflectionEquals(this, obj, "weight");
+        return EqualsBuilder.reflectionEquals(this, obj);
     }
 
     @Override

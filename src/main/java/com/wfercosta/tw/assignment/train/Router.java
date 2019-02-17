@@ -42,6 +42,14 @@ public class Router {
             throw new NoSuchRouteException(routePath);
         }
 
+        if (routePath.maxStops() > 1) {
+            routes = routes.stream().filter(route -> route.stops() <= routePath.maxStops()).collect(Collectors.toList());
+        }
+
+        if (routePath.maxDistance() > 1) {
+            routes = routes.stream().filter(route -> route.stops() <= routePath.maxDistance()).collect(Collectors.toList());
+        }
+
         return Trip.of(routes, selected);
     }
 
@@ -56,12 +64,16 @@ public class Router {
 
         Set<WeightedNode> nodes = this.graph.adjacentsFrom(current);
 
+        LOG.debug("Weighted Nodes for {}: {}", current, nodes);
+
         if (visited.isEmpty()) {
             visited.add(WeightedNode.of(current));
         }
 
         for (WeightedNode node : nodes) {
+
             if (visited.contains(node)) {
+                LOG.debug("L1 - Already contains node {}: ", node);
                 continue;
             }
 
@@ -74,7 +86,8 @@ public class Router {
         }
 
         for (WeightedNode node: nodes) {
-            if (visited.contains(node) || node.equals(end)) {
+            if (visited.contains(node) || (node.equals(end))) {
+                LOG.debug("L2 - Already contains node {}: ", node);
                 continue;
             }
 
@@ -85,7 +98,4 @@ public class Router {
 
     }
 
-    public Trip compute(RoutePath end, int noLongerThan) {
-        return null;
-    }
 }

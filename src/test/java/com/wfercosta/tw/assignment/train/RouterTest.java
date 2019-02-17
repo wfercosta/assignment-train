@@ -103,7 +103,8 @@ public class RouterTest {
         Trip trip = router.compute(
                 RoutePath
                         .startAt("C")
-                            .to("C")
+                        .to("C")
+                        .stopsLessThanEqualTo(3)
                         .end()
         );
 
@@ -114,7 +115,6 @@ public class RouterTest {
     }
 
     @Test
-    @Disabled
     @DisplayName("7# Should return 3 trips When the trip starts in A and ends in C")
     public void Should_Return3Trips_When_TripStartsAAndEndsInC() {
 
@@ -172,8 +172,9 @@ public class RouterTest {
                 RoutePath
                         .startAt("C")
                             .to("C")
+                        .distanceLessThanEqualTo(30)
                         .end()
-        , 30);
+        );
 
         assertEquals(7, trip.routes().size());
         assertTrue(trip.routes().stream().allMatch( route -> route.distance() < 30));
