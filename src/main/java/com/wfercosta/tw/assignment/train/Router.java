@@ -1,5 +1,12 @@
 package com.wfercosta.tw.assignment.train;
 
+import com.wfercosta.tw.assignment.train.router.command.filter.RouteFilter;
+import com.wfercosta.tw.assignment.train.router.command.filter.RouteFilterEqualTo;
+import com.wfercosta.tw.assignment.train.router.command.filter.RouteFilterLessThanEqualTo;
+import com.wfercosta.tw.assignment.train.router.command.filter.RouteFilterType;
+import com.wfercosta.tw.assignment.train.router.exceptions.GraphInputDoesNotMatchPatternException;
+import com.wfercosta.tw.assignment.train.router.exceptions.NoSuchRouteException;
+import com.wfercosta.tw.assignment.train.router.model.*;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,16 +23,21 @@ public class Router {
     private List<RouteFilter> filterTypes = new ArrayList<>();
 
     public Router(String data) {
+        validateAndInitializeInputData(data);
+        initializeFilterTypes();
+    }
 
+    private void validateAndInitializeInputData(String data) {
         if (StringUtils.isEmpty(data)) {
             throw new GraphInputDoesNotMatchPatternException(data);
         }
 
         this.graph = DirectedGraph.from(data);
+    }
 
+    private void initializeFilterTypes() {
         filterTypes.add(new RouteFilterEqualTo());
         filterTypes.add(new RouteFilterLessThanEqualTo());
-
     }
 
     public static Router withGraph(String graphData) {
@@ -40,12 +52,25 @@ public class Router {
 
         LOG.debug(routes.toString());
 
+        Route selected = validateAndObtainUserSelectedRoute(routePath, routes);
+
+        routes = applyRouteFilters(routePath, routes);
+
+        LOG.debug(routes.toString());
+
+        return Trip.of(routes, selected);
+    }
+
+    private Route validateAndObtainUserSelectedRoute(RoutePath routePath, List<Route> routes) {
         Route selected  = routes.stream().filter(route -> route.match(routePath)).findFirst().orElse(null);
 
         if (routePath.paths().size() > 2 && Objects.isNull(selected)) {
             throw new NoSuchRouteException(routePath);
         }
+        return selected;
+    }
 
+    private List<Route> applyRouteFilters(RoutePath routePath, List<Route> routes) {
         if(!routePath.filters().isEmpty()) {
 
             for (Map.Entry<RouteFilterType, Integer> entry : routePath.filters().entrySet()) {
@@ -58,10 +83,7 @@ public class Router {
             }
 
         }
-
-        LOG.debug(routes.toString());
-
-        return Trip.of(routes, selected);
+        return routes;
     }
 
     private List<Route> obtainRoutesFor(RoutePath path) {

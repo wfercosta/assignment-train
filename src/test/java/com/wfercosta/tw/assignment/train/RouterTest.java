@@ -1,6 +1,10 @@
 package com.wfercosta.tw.assignment.train;
 
 
+import com.wfercosta.tw.assignment.train.router.command.filter.RouteFilterType;
+import com.wfercosta.tw.assignment.train.router.exceptions.NoSuchRouteException;
+import com.wfercosta.tw.assignment.train.router.model.RoutePath;
+import com.wfercosta.tw.assignment.train.router.model.Trip;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;

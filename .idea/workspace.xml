@@ -2,14 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da7539e9-0728-4574-bb9a-fab0b68cb79d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterEqualTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterLessThanEqualTo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/MessageResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/ApplicationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/DirectedEdge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/DirectedGraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/ExceptionCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/GraphInputDoesNotMatchPatternException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/InvalidGraphNodeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/NoSuchRouteException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/Route.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouteFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouteFilterEqualTo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouteFilterLessThanEqualTo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouteFilterLessThanEqualTo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouteFilterType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RoutePath$RoutePathBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RoutePath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/Router.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/RouterExceptionCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/Trip.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/wfercosta/tw/assignment/train/WeightedNode.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/classes/com/wfercosta/tw/assignment/train/RouterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/com/wfercosta/tw/assignment/train/RouterTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RoutePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RoutePath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/ApplicationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/ApplicationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/DirectedEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/DirectedEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/DirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/DirectedGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/ExceptionCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/ExceptionCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/GraphInputDoesNotMatchPatternException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/GraphInputDoesNotMatchPatternException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/InvalidGraphNodeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/InvalidGraphNodeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/NoSuchRouteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/NoSuchRouteException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterEqualTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilterEqualTo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterLessThanEqualTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilterLessThanEqualTo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilterType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RoutePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/RoutePath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouterExceptionCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/RouterExceptionCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/Trip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/WeightedNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/WeightedNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/wfercosta/tw/assignment/train/RouterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/wfercosta/tw/assignment/train/RouterTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -78,68 +111,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/wfercosta/tw/assignment/train/RouterTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="164" column="9" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
+            <state relative-caret-position="508">
+              <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Router.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="61" column="35" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterLessThanEqualTo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterEqualTo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="84" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
-              <folding>
-                <element signature="e#168#169#0" expanded="true" />
-                <element signature="e#196#197#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -195,8 +173,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterEqualTo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterLessThanEqualTo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RoutePath.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Router.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wfercosta/tw/assignment/train/RouterTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/Route.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/NoSuchRouteException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/ApplicationException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/ExceptionCode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/RouterExceptionCode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/MessageResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Router.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/RoutePath.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Main.java" />
       </list>
     </option>
   </component>
@@ -275,11 +262,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550437870337" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550440904149" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.wfercosta.tw.assignment.train.commons.exception" />
       <recent name="com.wfercosta.tw.assignment.train" />
     </key>
   </component>
@@ -295,12 +284,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wfercosta.tw.assignment.train.Main" />
+      <module name="com.wfercosta.tw.assignment.train.train.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wfercosta.tw.assignment.train.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RouterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="com.wfercosta.tw.assignment.train.train.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wfercosta.tw.assignment.train.*" />
+          <option name="PATTERN" value="com.wfercosta.tw.assignment.train.commons.exception.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -313,6 +315,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.RouterTest" />
       </list>
     </recent_temporary>
@@ -331,15 +334,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RouterTest - 2019.02.17 at 16h 57m 23s.xml">
-      <configuration name="RouterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RouterTest - 2019.02.17 at 16h 58m 51s.xml">
-      <configuration name="RouterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RouterTest - 2019.02.17 at 17h 14m 56s.xml">
-      <configuration name="RouterTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RouterTest - 2019.02.17 at 17h 15m 16s.xml">
       <configuration name="RouterTest" configurationId="JUnit" />
     </history-entry>
@@ -359,6 +353,15 @@
       <configuration name="RouterTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="RouterTest - 2019.02.17 at 18h 11m 03s.xml">
+      <configuration name="RouterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RouterTest - 2019.02.17 at 18h 11m 13s.xml">
+      <configuration name="RouterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RouterTest - 2019.02.17 at 18h 26m 56s.xml">
+      <configuration name="RouterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RouterTest - 2019.02.17 at 18h 27m 44s.xml">
       <configuration name="RouterTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -401,19 +404,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Router.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Router.java</url>
-          <line>75</line>
+          <line>97</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Route.java</url>
-          <line>31</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/Route.java</url>
+          <line>33</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -461,34 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/NoSuchRouteException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/ExceptionCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/ApplicationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/GraphInputDoesNotMatchPatternException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/regex/Matcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -528,40 +497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/DirectedEdge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#586#587#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <element signature="e#1213#1214#0" expanded="true" />
-            <element signature="e#1354#1355#0" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouterExceptionCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/InvalidGraphNodeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/com/sun/corba/se/impl/orbutil/graph/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -576,116 +511,190 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/DirectedGraph.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/DirectedEdge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1448#1449#0" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Trip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/WeightedNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Route.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterEqualTo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="84" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
-          <folding>
-            <element signature="e#168#169#0" expanded="true" />
-            <element signature="e#196#197#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilterLessThanEqualTo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RoutePath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-          <folding>
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/RouteFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/Route.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/ExceptionCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/MessageResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/commons/exception/ApplicationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilterLessThanEqualTo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilterType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilterEqualTo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/command/filter/RouteFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/RouterExceptionCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/NoSuchRouteException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/InvalidGraphNodeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/exceptions/GraphInputDoesNotMatchPatternException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/WeightedNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/Trip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Router.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="61" column="35" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+        <state relative-caret-position="690">
+          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/DirectedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="135" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="11" selection-end-column="135" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/router/model/RoutePath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+          <folding>
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/wfercosta/tw/assignment/train/RouterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="164" column="9" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
+        <state relative-caret-position="150">
+          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wfercosta/tw/assignment/train/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="54" column="56" selection-start-line="54" selection-start-column="56" selection-end-line="54" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
