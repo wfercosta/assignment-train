@@ -32,11 +32,10 @@ public class RouterTest {
                     .end()
         );
 
-        assertEquals(9, trip.shortestRoute().distance());
+        assertEquals(9, trip.selected().distance());
     }
 
     @Test
-    @Disabled
     @DisplayName("2# Should return distance 5 When the route were A-D")
     public void Should_ReturnDistance5_When_RouteWhereAD() {
 
@@ -47,11 +46,10 @@ public class RouterTest {
                     .end()
         );
 
-        assertEquals(5, trip.shortestRoute().distance());
+        assertEquals(5, trip.selected().distance());
     }
 
     @Test
-    @Disabled
     @DisplayName("3# Should return distance 13 When the route were A-D-C")
     public void Should_ReturnDistance13_When_RouteWhereADC() {
 
@@ -63,11 +61,10 @@ public class RouterTest {
                     .end()
         );
 
-        assertEquals(13, trip.shortestRoute().distance());
+        assertEquals(13, trip.selected().distance());
     }
 
     @Test
-    @Disabled
     @DisplayName("4# Should return distance 22 When the route were A-E-B-C-D")
     public void Should_ReturnDistance22_When_RouteWhereAEBCD() {
 
@@ -81,12 +78,11 @@ public class RouterTest {
                     .end()
         );
 
-        assertEquals(22, trip.shortestRoute().distance());
+        assertEquals(22, trip.selected().distance());
     }
 
 
     @Test
-    @Disabled
     @DisplayName("5# Should return distance NO SUCH ROUTE When the route were A-E-D")
     public void Should_ReturnDistanceNoSuchRoute_When_RouteWhereAED() {
 
@@ -101,7 +97,6 @@ public class RouterTest {
     }
 
     @Test
-    @Disabled
     @DisplayName("6# Should return 2 trips When the trip starts in C and ends in C")
     public void Should_Return2Trips_When_TripStartsAndEndsInC() {
 

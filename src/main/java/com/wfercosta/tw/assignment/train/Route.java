@@ -36,4 +36,8 @@ public class Route {
     public String toString() {
         return "Route [distance=" + distance + ", stops=" + stops + ", path=" + path + "]";
     }
+
+    public boolean match(RoutePath path) {
+        return this.path.stream().collect(Collectors.joining()).equals(path.paths().stream().collect(Collectors.joining()));
+    }
 }

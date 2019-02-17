@@ -28,15 +28,21 @@ public class Router {
         return new Router(graphData);
     }
 
-    public Trip compute(RoutePath path) {
+    public Trip compute(RoutePath routePath) {
 
-        LOG.debug(path.toString());
+        LOG.debug(routePath.toString());
 
-        List<Route> routes = obtainRoutesFor(path);
+        List<Route> routes = obtainRoutesFor(routePath);
 
         LOG.debug(routes.toString());
 
-        return Trip.of(routes);
+        Route selected  = routes.stream().filter(route -> route.match(routePath)).findFirst().orElse(null);
+
+        if (routePath.paths().size() > 2 && Objects.isNull(selected)) {
+            throw new NoSuchRouteException(routePath);
+        }
+
+        return Trip.of(routes, selected);
     }
 
     private List<Route> obtainRoutesFor(RoutePath path) {

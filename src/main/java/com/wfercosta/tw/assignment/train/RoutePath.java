@@ -42,6 +42,10 @@ public class RoutePath {
         return this.paths.get(this.paths.size() - 1);
     }
 
+    public List<String> paths() {
+        return Collections.unmodifiableList(this.paths);
+    }
+
     public static class RoutePathBuilder {
 
         private List<String> paths = new ArrayList<>();

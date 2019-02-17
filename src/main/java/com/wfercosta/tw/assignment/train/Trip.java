@@ -1,25 +1,45 @@
 package com.wfercosta.tw.assignment.train;
 
+
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class Trip {
 
     private final List<Route> routes;
+    private final Route selected;
+    private final Route shortest;
 
     public Trip(List<Route> routes) {
-        this.routes = routes;
+        this(routes, null);
     }
 
-    public static Trip of(List<Route> routes) {
-        return new Trip(routes);
+    public Trip(List<Route> routes, Route selected) {
+        this.routes = routes;
+        this.shortest = this.routes.get(0);
+
+        if (Objects.isNull(selected)) {
+            this.selected = shortest;
+        } else {
+            this.selected = selected;
+        }
+
+    }
+
+    public static Trip of(List<Route> routes, Route match) {
+        return new Trip(routes, match);
     }
 
     public Route shortestRoute() {
-        return this.routes.get(0);
+        return shortest;
     }
 
     public List<Route> routes() {
         return Collections.unmodifiableList(routes);
+    }
+
+    public Route selected() {
+        return this.selected;
     }
 }
